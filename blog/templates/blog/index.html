@@ -1,43 +1,34 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %} My Blog {% endblock %}
 
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/base_posts.css' %}">
+<link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{% endblock %}
+
 {% block content %}
-    <header id="main-navigation">
-        <h1> <a href=""> Alizadeh Blog</a> </h1>
-        <nav>
-            <a href="">All Posts</a>
-        </nav>
+<section id="welcome">
+    <header>
+        <img src="{% static 'blog/images/mra.jpg' %}" alt="Developed By Alizadeh"/>
+        <h2>Mohammad Reza Alizadeh Blog</h2>
     </header>
+    <p>Hi, This is my first django project that deployed on github.</p>
+</section>
 
-    <section id="welcome">
-        <header>
-            <img src="" alt="Developed By Alizadeh"/>
-            <h2>Mohammad Reza Alizadeh Blog</h2>
-        </header>
-        <p>Hi, This is my first django project that deployed on github.</p>
-    </section>
+<section id="latest-posts">
+    <h2>My latest Posts</h2>
 
-    <section id="latest-posts">
-        <h2>My latest Posts</h2>
+    <ul>
+        {% for post in last_posts %}
+        {% include 'blog/includes/thumbnail-post.html' %}
+        {% endfor %}
+    </ul>
+</section>
 
-        <ul>
-            <li>
-                <article class="post">
-                    <a href="">
-                        <img src="" alt="Lord" />
-                        <div class="post__content">
-                            <h3>Dark Lord</h3>
-                            <p>This is the worst lord of all the world, so watch your movement</p>
-                        </div>
-                    </a>
-                </article>
-            </li>
-        </ul>
-    </section>
-
-    <section id="about">
-        <h2>What I Do</h2>
-        <p>I Love Programing and watching the Lords Types</p>
-    </section>
+<section id="about">
+    <h2>What I Do</h2>
+    <p>I Love Programing and watching the Lords Types</p>
+</section>
 {% endblock %}
