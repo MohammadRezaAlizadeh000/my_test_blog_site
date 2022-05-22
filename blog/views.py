@@ -6,7 +6,7 @@ def starting_page(request):
 
 
 def posts(request):
-    return render(request)
+    return render(request, 'blog/posts.html')
 
 
 def single_post(request):
