@@ -13,11 +13,9 @@
     <h2>My Collected Posts</h2>
 
     <ul>
+      {% for post in all_posts %}
       {% include 'blog/includes/thumbnail-post.html' %}
-      {% include 'blog/includes/thumbnail-post.html' %}
-      {% include 'blog/includes/thumbnail-post.html' %}
-      {% include 'blog/includes/thumbnail-post.html' %}
-      {% include 'blog/includes/thumbnail-post.html' %}
+      {% endfor %}
     </ul>
 
   </section>
