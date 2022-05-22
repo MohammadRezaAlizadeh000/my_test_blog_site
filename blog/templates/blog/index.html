@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %} My Blog {% endblock %}
+
+{% block content %}
+    <header id="main-navigation">
+        <h1> <a href=""> Alizadeh Blog</a> </h1>
+        <nav>
+            <a href="">All Posts</a>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <header>
+            <img src="" alt="Developed By Alizadeh"/>
+            <h2>Mohammad Reza Alizadeh Blog</h2>
+        </header>
+        <p>Hi, This is my first django project that deployed on github.</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My latest Posts</h2>
+
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="Lord" />
+                        <div class="post__content">
+                            <h3>Dark Lord</h3>
+                            <p>This is the worst lord of all the world, so watch your movement</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>I Love Programing and watching the Lords Types</p>
+    </section>
+{% endblock %}
